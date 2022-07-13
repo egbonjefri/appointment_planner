@@ -22,6 +22,9 @@ function handleClick(e) {
   const nameError = document.getElementsByClassName('error-text')[0];
   const numError = document.getElementsByClassName('error-text')[1];
   const emailError = document.getElementsByClassName('error-text')[2];
+  const aname = document.getElementById('name');
+   const anumber = document.getElementById('number');
+   const aemail = document.getElementById('email');
 
 
 
@@ -30,28 +33,37 @@ function handleClick(e) {
     function nameChecker() { 
     if (nameRegex.test(name)) {
       nameError.style.display = 'none'
+      aname.style.border = 'none'
+      aname.style.borderBottom = 'solid 1px black'
       return true
     }
     else {
       nameError.style.display = 'block'
+      aname.style.border = 'solid 2px red'
     }
   }
     function numChecker() {
     if (numRegex.test(num)) {
-      numError.style.display = 'none'
+      numError.style.display = 'none';
+      anumber.style.border = 'none';
+      anumber.style.borderBottom = 'solid 1px black';
       return true
     }
     else {
+      anumber.style.border = 'solid 2px red'
       numError.style.display = 'block'
     }
   }
   function emailChecker() {
     if (emailRegex.test(email)) {
-      emailError.style.display = 'none'
+      emailError.style.display = 'none';
+      aemail.style.border = 'none';
+      aemail.style.borderBottom = 'solid 1px black'
       return true
     }
     else {
       emailError.style.display = 'block'
+      aemail.style.border = 'solid 2px red'
     }
   }
   if (nameChecker() && numChecker() && emailChecker()) {

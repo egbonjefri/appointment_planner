@@ -17,13 +17,22 @@ export default function Appointments() {
     function handleSubmit(e) {
         e.preventDefault();
         const nameError = document.getElementsByClassName('error-text')[0];
+        const name = document.getElementById('name');
+        const number = document.getElementById('number');
+
 
         function errorChecker(){
            if (typeof title === 'object') {
                nameError.style.display = 'block';
+               name.style.border = 'solid 2px red'
            }
- 
+           else if (typeof contact === 'object') {
+            number.style.border = 'solid 2px red'
+           }
            else {
+            name.style.border = 'none'
+            name.style.borderBottom = 'solid 1px black'
+            number.style.border = 'solid 1px gray'
             nameError.style.display = 'none';
             return true
            }
@@ -37,6 +46,8 @@ export default function Appointments() {
         }
           dispatch(apptAdder(a))
             const inputs = document.querySelectorAll('#name,#number');
+            setTitle([]);
+            setContact([])
             inputs.forEach(input => {
               input.value = ''
             }) 

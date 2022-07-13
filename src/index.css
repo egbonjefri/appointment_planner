@@ -37,13 +37,16 @@ nav {
   margin: 5rem 0
 }
 .error-text {
-  background-color: red;
+  color: red;
   text-align: center;
   display: none;
 }
 .material-icons {
   cursor: pointer !important;
-  
+}
+nav li:hover {
+  border-bottom: solid 10px white;
+  transition: .35s ease-in-out;
 }
 .new {
   margin: 0.9rem 2.5rem;
@@ -72,4 +75,19 @@ nav {
   border: solid 1px black;
   margin: 1rem 0;
   text-align: center;
+}
+
+@media(max-width: 420px){
+  nav ul {
+    width: 15rem;
+  }
+}
+@media(max-width: 970px){
+  .appt {
+    width: 100% !important
+  }
+  .contacts {
+    width: 100% !important
+
+  }
 }
