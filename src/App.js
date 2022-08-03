@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom'
 import Contacts from './Contacts.js'
 import Appointments from './Appointments.js'
+import Homepage from './HomePage.js';
 import './materialize.css'
 
 import NavBar from './NavBar.js' 
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path='/contacts' element={<Contacts />} />
         <Route path='/appointments' element={<Appointments />} />
+        <Route path='/' element={<Homepage />} />
       </Routes>
      <p className='author center'>Created by @egbonjefri for CodeCademy</p>
     </div>
